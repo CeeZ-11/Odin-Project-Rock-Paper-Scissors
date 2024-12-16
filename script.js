@@ -28,25 +28,25 @@ function playerChoice(choice) {
   switch (target.id) {
     case "Rock":
       result = playRound("Rock", computerSelection);
-      resultRound.textContent = `${result} Score ${win} | ${lose}`;
+      resultRound.innerHTML = `${result} <br> Player Score: ${win} | Computer Score: ${lose}`;
       break;
     case "Paper":
       result = playRound("Paper", computerSelection);
-      resultRound.textContent = `${result} Score ${win} | ${lose}`;
+      resultRound.innerHTML = `${result}  <br> Player Score: ${win} | Computer Score: ${lose}`;
 
       break;
     case "Scissors":
       result = playRound("Scissors", computerSelection);
-      resultRound.textContent = `${result} Score ${win} | ${lose}`;
+      resultRound.innerHTML = `${result} <br> Player Score: ${win} | Computer Score: ${lose}`;
       break;
   }
 
   if (win == 5) {
-    resultRound.textContent = `Player wins against computer, Final score is (${win}-${lose})`;
+    resultRound.textContent = `Player wins against computer 🎉🎉🎉, Final score is (${win}-${lose})`;
     win = 0;
     lose = 0;
   } else if (lose == 5) {
-    resultRound.textContent = `Player loses to computer, Final score is (${win}-${lose})`;
+    resultRound.textContent = `Player loses to computer  😞😞😞, Final score is (${win}-${lose})`;
     win = 0;
     lose = 0;
   }
