@@ -5,6 +5,16 @@
 
 * {
   margin: 0;
+  --bg-color: #1a1a2e;
+  --text-color: #e4e4e4;
+  --button-bg-color: #1f4068;
+  --button-hover-color: #e94560;
+  --button-disabled-color: #4b6584;
+  --button-text-color: #ffffff;
+  --game-logo-width: 150px;
+  --game-logo-height: 150px;
+  --game-option-width: 100px;
+  --game-option-height: 100px;
 }
 
 body {
@@ -41,4 +51,48 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+#game-logo {
+  width: var(--game-logo-width);
+  height: var(--game-logo-height);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  gap: 30px;
+}
+
+#options {
+  display: flex;
+  gap: 50px;
+}
+
+.playerSelection {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+.playerSelection:hover {
+  background-color: var(--button-hover-color);
+}
+
+.game-option {
+  width: var(--game-option-width);
+  height: var(--game-option-height);
+}
+
+#RockDiv,
+#PaperDiv,
+#ScissorsDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
 }

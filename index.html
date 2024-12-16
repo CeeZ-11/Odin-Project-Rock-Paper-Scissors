@@ -5,15 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Project: Rock Paper Scissors</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="container">
+      <img src="./svg/rock-paper-scissors.png" alt="logo" id="game-logo" />
       <h1>Odin Project: Rock Paper Scissors</h1>
 
-      <button class="playerSelection" id="Rock">Rock</button>
-      <button class="playerSelection" id="Paper">Paper</button>
-      <button class="playerSelection" id="Scissors">Scissors</button>
-
+      <div id="options">
+        <div id="RockDiv">
+          <img
+            src="./svg/Rock-paper-scissors_(rock).png"
+            alt="Rock"
+            class="game-option"
+          />
+          <button class="playerSelection" id="Rock">Rock</button>
+        </div>
+        <div id="PaperDiv">
+          <img
+            src="./svg/Rock-paper-scissors_(paper).png"
+            alt="Paper"
+            class="game-option"
+          />
+          <button class="playerSelection" id="Paper">Paper</button>
+        </div>
+        <div id="ScissorsDiv">
+          <img
+            src="./svg/Rock-paper-scissors_(scissors).png"
+            alt="Scissors"
+            class="game-option"
+          />
+          <button class="playerSelection" id="Scissors">Scissors</button>
+        </div>
+      </div>
       <div id="result"></div>
     </div>
   </body>
