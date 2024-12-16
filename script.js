@@ -24,18 +24,46 @@ function playRound(playerSelection, computerSelection) {
 function playerChoice(choice) {
   let target = choice.target;
   let computerSelection = getComputerChoice(gameChoice);
+  let rock = document.getElementById("rock-option");
+  let paper = document.getElementById("paper-option");
+  let scissors = document.getElementById("scissors-option");
+
+  btns.forEach((btn) => {
+    btn.classList.remove("player-selection");
+  });
 
   switch (target.id) {
     case "Rock":
+      rock.classList.add("scale");
+      target.classList.add("player-selection");
+
+      setTimeout(() => {
+        rock.classList.remove("scale");
+      }, 500);
+
       result = playRound("Rock", computerSelection);
       resultRound.innerHTML = `${result} <br> Player Score: ${win} | Computer Score: ${lose}`;
       break;
     case "Paper":
+      paper.classList.add("scale");
+      target.classList.add("player-selection");
+
+      setTimeout(() => {
+        paper.classList.remove("scale");
+      }, 500);
+
       result = playRound("Paper", computerSelection);
       resultRound.innerHTML = `${result}  <br> Player Score: ${win} | Computer Score: ${lose}`;
 
       break;
     case "Scissors":
+      scissors.classList.add("scale");
+      target.classList.add("player-selection");
+
+      setTimeout(() => {
+        scissors.classList.remove("scale");
+      }, 500);
+
       result = playRound("Scissors", computerSelection);
       resultRound.innerHTML = `${result} <br> Player Score: ${win} | Computer Score: ${lose}`;
       break;

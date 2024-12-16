@@ -8,13 +8,15 @@
   --bg-color: #1a1a2e;
   --text-color: #e4e4e4;
   --button-bg-color: #1f4068;
-  --button-hover-color: #e94560;
+  --button-hover-color: #004203;
   --button-disabled-color: #4b6584;
   --button-text-color: #ffffff;
   --game-logo-width: 150px;
   --game-logo-height: 150px;
-  --game-option-width: 100px;
-  --game-option-height: 100px;
+  --game-option-width: 150px;
+  --game-option-height: 150px;
+  --player-background-color: #004203;
+  --computer-background-color: #e94560;
 }
 
 body {
@@ -71,7 +73,10 @@ h6 {
 
 #options {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
+  flex: 1;
 }
 
 .playerSelection {
@@ -100,4 +105,32 @@ h6 {
 #result {
   font-size: 1rem;
   text-align: center;
+  flex: 1;
+}
+
+#header {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#paper-option,
+#rock-option,
+#scissors-option {
+  transition: transform 2s ease;
+}
+
+.scale {
+  transform: scale(1.5);
+}
+
+.player-selection {
+  background-color: var(--player-background-color);
+}
+
+.computer-selection {
+  background-color: var(--computer-background-color);
 }
